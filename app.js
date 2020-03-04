@@ -1,5 +1,5 @@
+var data = null;
 $(document).ready(function() {
-  var data = null;
   function setQuote() {
     let quotes =
       data.quotes[Math.floor(Math.random() * data.quotes.length) + 0];
