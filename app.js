@@ -7,40 +7,35 @@ $(document).ready(function() {
       success: function(result) {
         data = JSON.parse(result);
         console.log(data);
+        let quotes =
+          data.quotes[Math.floor(Math.random() * data.quotes.length) + 0];
+        $("span").html(quotes.quote);
+        $("p").html("- " + quotes.author);
+        let letters = "0123456789ABCDEF";
+        let colors = "#";
+        for (let i = 0; i < 6; i++) {
+          colors += letters[Math.floor(Math.random() * 16)];
+        }
+        console.log(colors);
+        $(".text-color").css({
+          color: colors,
+          transition: "all 1s ease 0s"
+        });
+        $("body").css({
+          "background-color": colors,
+          transition: "all 1s ease 0s"
+        });
+        $(".bg-color").css({
+          "background-color": colors,
+          transition: "all 1s ease 0s"
+        });
       }
     });
-    
   }
   getData();
-  // console.log(data);
-  // let quo = data.quotes[Math.floor(Math.random() * data.quotes.length) + 0];
-  // $("span").loa;
-  // $("p").html("- " + quo.quote);
-  // $("#btn").click(function() {
+  $("#btn").click(function() {
     try {
-      console.log(data);
-      let quotes =
-        data.quotes[Math.floor(Math.random() * data.quotes.length) + 0];
-      $("span").html(quotes.quote);
-      $("p").html("- " + quotes.author);
-      let letters = "0123456789ABCDEF";
-      let colors = "#";
-      for (let i = 0; i < 6; i++) {
-        colors += letters[Math.floor(Math.random() * 16)];
-      }
-      console.log(colors);
-      $(".text-color").css({
-        color: colors,
-        transition: "all 1s ease 0s"
-      });
-      $("body").css({
-        "background-color": colors,
-        transition: "all 1s ease 0s"
-      });
-      $(".bg-color").css({
-        "background-color": colors,
-        transition: "all 1s ease 0s"
-      });
+      getData();
     } catch (e) {
       console.log(e);
     }
