@@ -53,10 +53,10 @@ span {
 .float-right {
   float: right;
 }
-/* button {
+button {
   border: 0;
   border-radius: 3px;
-} */
+}
 .quote-question i {
   font-size: 1.7em;
   margin-right: 0.2em;
