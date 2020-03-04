@@ -1,13 +1,18 @@
 $(document).ready(function() {
-  $("#btn").click(function() {
+  const data;
+  function getData(){
     $.ajax({
       url:
         "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json?fbclid=IwAR2Z_oZyZt_QihXG0wJLG0E19ihHG_jbayxd2dQOOpVVRUPtUQULOQujuz0",
       success: function(result) {
-        let questions = JSON.parse(result);
+        data= JSON.parse(result);
+      }
+    })}
+  getData();
+  $("#btn").click(function() {
         let quotes =
-          questions.quotes[
-            Math.floor(Math.random() * questions.quotes.length) + 0
+          data.quotes[
+            Math.floor(Math.random() * data.quotes.length) + 0
           ];
         $("span").html(quotes.quote);
         $("p").html("- " + quotes.author);
@@ -29,7 +34,4 @@ $(document).ready(function() {
           "background-color": colors,
           transition: "all 1s ease 0s"
         });
-      }
-    });
-  });
-});
+      })});
