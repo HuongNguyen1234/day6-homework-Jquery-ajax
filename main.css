@@ -1,0 +1,63 @@
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: aqua;
+}
+span {
+  text-align: center;
+  width: 450px;
+  height: auto;
+  clear: both;
+  font-weight: 500;
+  font-size: 1.75em;
+}
+.quote-box {
+  text-align: center;
+  background-color: white;
+  border-radius: 3px;
+  position: relative;
+  width: 450px;
+  padding: 40px 50px;
+}
+.quote-author {
+  height: 40px;
+  text-align: right;
+}
+.text-color {
+  color: rgb(115, 168, 87);
+}
+.bg-color {
+  background-color: rgb(115, 168, 87);
+}
+.t-color {
+  color: #ffffff;
+}
+.set-inline {
+  display: inline-block !important;
+}
+.btn {
+  height: 30px;
+  font-size: 1.2em;
+}
+.btn1 {
+  width: 40px;
+  float: left;
+}
+.m-left-Btn-twitter {
+  margin-left: 10px;
+}
+.float-right {
+  float: right;
+}
+/* button {
+  border: 0;
+  border-radius: 3px;
+} */
+.quote-question i {
+  font-size: 1.7em;
+  margin-right: 0.2em;
+}
